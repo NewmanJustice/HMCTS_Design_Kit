@@ -1,0 +1,38 @@
+@use "../tokens" as *;
+
+.hmcts-header {
+  background: $hmcts-colour-navy;
+  color: $hmcts-colour-white;
+}
+
+.hmcts-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: $hmcts-space-3;
+  padding-bottom: $hmcts-space-3;
+}
+
+.hmcts-header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: $hmcts-space-2;
+  color: $hmcts-colour-white;
+  text-decoration: none;
+  font-weight: $hmcts-font-weight-bold;
+}
+
+.hmcts-header__brand:focus {
+  outline: none;
+}
+
+.hmcts-header__brand:focus-visible {
+  outline: 3px solid $hmcts-colour-focus;
+  outline-offset: 2px;
+}
+
+.hmcts-header__title {
+  margin: 0;
+  font-size: $hmcts-font-size-h4;
+  font-weight: $hmcts-font-weight-bold;
+}

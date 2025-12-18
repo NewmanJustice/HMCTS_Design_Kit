@@ -1,0 +1,25 @@
+@use "../tokens" as *;
+@use "../tools" as *;
+
+.hmcts-footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $hmcts-space-3;
+}
+
+.hmcts-footer-nav__link {
+  color: $hmcts-colour-link;
+  text-decoration: underline;
+  font-size: $hmcts-font-size-footnote;
+}
+
+.hmcts-footer-nav__link:focus {
+  outline: none;
+}
+
+.hmcts-footer-nav__link:focus-visible {
+  @include hmcts-focus-ring;
+}

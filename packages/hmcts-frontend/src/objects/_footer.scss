@@ -1,0 +1,25 @@
+@use "../tokens" as *;
+
+.hmcts-footer {
+  background: $hmcts-tint10-grey;
+  border-top: 1px solid $hmcts-tint25-grey;
+  margin-top: $hmcts-space-6;
+}
+
+.hmcts-footer__inner {
+  padding-top: $hmcts-space-5;
+  padding-bottom: $hmcts-space-5;
+}
+
+.hmcts-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $hmcts-space-3;
+  align-items: center;
+}
+
+.hmcts-footer__text {
+  margin: 0;
+  color: $hmcts-colour-text-secondary;
+  font-size: $hmcts-font-size-footnote;
+}

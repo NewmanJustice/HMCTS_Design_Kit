@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../dist/hmcts.css" />
+    <title>HMCTS Frontend Test</title>
+  </head>
+  <body style="padding: 24px;">
+    <header class="hmcts-header">
+        <div class="hmcts-container">
+            <div class="hmcts-header__inner">
+            <a class="hmcts-header__brand" href="/">
+                <span class="hmcts-header__title">HMCTS Design System (Dev)</span>
+            </a>
+            <nav aria-label="Top navigation">
+                <ul class="hmcts-top-nav">
+                <li><a class="hmcts-top-nav__link" aria-current="page" href="/">Overview</a></li>
+                <li><a class="hmcts-top-nav__link" href="/components/button.html">Components</a></li>
+                <li><a class="hmcts-top-nav__link" href="/patterns.html">Patterns</a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+    <main class="hmcts-container" style="margin-top: 24px;">
+        <div class="hmcts-stack">
+            <h1>Heading 1 – HMCTS navy</h1>
+            <h2>Heading 2 – black</h2>
+            <h3>Heading 3 – HMCTS navy</h3>
+            <h4>Heading 4 – HMCTS navy</h4>
+            <p>
+                Body copy in Arial. <a href="#">This is a link</a>.
+            </p>
+            <p class="hmcts-footnote">Footnote text</p>
+            <button class="hmcts-button">Continue</button>
+            <p>
+                <a href="#" class="hmcts-link">HMCTS styled link</a>
+            </p>
+            <div class="hmcts-notification hmcts-notification--info" role="status">
+                <p class="hmcts-notification__title">Information</p>
+                <p class="hmcts-notification__content">This is an info message.</p>
+            </div>
+            <div class="hmcts-notification hmcts-notification--success" role="status">
+                <p class="hmcts-notification__title">Success</p>
+                <p class="hmcts-notification__content">Your changes have been saved.</p>
+            </div>
+            <div class="hmcts-notification hmcts-notification--warning" role="status">
+                <p class="hmcts-notification__title">Warning</p>
+                <p class="hmcts-notification__content">Check the details before continuing.</p>
+            </div>
+            <div class="hmcts-notification hmcts-notification--error" role="alert">
+                <p class="hmcts-notification__title">There is a problem</p>
+                <p class="hmcts-notification__content">Enter a case reference number.</p>
+            </div>
+            <div class="hmcts-form-group">
+                <label class="hmcts-label" for="case-id">Case ID</label>
+                <input class="hmcts-input" id="case-id" />
+            </div>
+        </div>
+    </main>
+    <footer class="hmcts-footer">
+        <div class="hmcts-container hmcts-footer__inner">
+            <div class="hmcts-footer__meta">
+            <ul class="hmcts-footer-nav">
+                <li><a class="hmcts-footer-nav__link" href="/">Overview</a></li>
+                <li><a class="hmcts-footer-nav__link" href="/components/button.html">Components</a></li>
+                <li><a class="hmcts-footer-nav__link" href="/patterns.html">Patterns</a></li>
+            </ul>
+            <p class="hmcts-footer__text">
+                Internal development documentation — not for public use
+            </p>
+            </div>
+        </div>
+    </footer>   
+  </body>
+</html>

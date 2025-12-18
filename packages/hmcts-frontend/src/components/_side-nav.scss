@@ -1,0 +1,54 @@
+@use "../tokens" as *;
+@use "../tools" as *;
+
+.hmcts-side-nav {
+  border-left: 4px solid $hmcts-tint25-grey;
+  padding-left: $hmcts-space-3;
+}
+
+.hmcts-side-nav__title {
+  margin: 0 0 $hmcts-space-3 0;
+  font-weight: $hmcts-font-weight-bold;
+}
+
+.hmcts-side-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hmcts-side-nav__item + .hmcts-side-nav__item {
+  margin-top: $hmcts-space-2;
+}
+
+.hmcts-side-nav__link {
+  display: inline-flex;
+  align-items: center;
+  color: $hmcts-colour-link;
+  text-decoration: underline;
+}
+
+.hmcts-side-nav__link:focus {
+  outline: none;
+}
+
+.hmcts-side-nav__link:focus-visible {
+  @include hmcts-focus-ring;
+}
+
+/* Active state */
+.hmcts-side-nav__link[aria-current="page"] {
+  text-decoration: none;
+  font-weight: $hmcts-font-weight-bold;
+  color: $hmcts-colour-text;
+}
+
+.hmcts-side-nav__link[aria-current="page"]::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $hmcts-colour-primary;
+  margin-right: $hmcts-space-2;
+}
