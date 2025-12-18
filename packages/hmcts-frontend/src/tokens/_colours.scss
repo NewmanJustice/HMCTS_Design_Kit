@@ -1,0 +1,62 @@
+// Core colours
+$hmcts-colour-blue: #0096d6;
+$hmcts-colour-navy: #002d59;
+$hmcts-colour-black: #000;
+$hmcts-colour-white: #fff;
+$hmcts-colour-grass-green: #11a63c;
+$hmcts-colour-magenta: #e72b78;
+
+// Secondary palette
+$hmcts-colour-teal: #008c9d;
+$hmcts-colour-lime: #95c11f;
+$hmcts-colour-orchid: #75295a;
+$hmcts-colour-rose-red: #b1005a;
+$hmcts-colour-grey: #878787;
+$hmcts-colour-orange: #e9531d;
+$hmcts-colour-golden: #f9ae00;
+$hmcts-colour-purple: #724695;
+
+// 10% tints
+$hmcts-tint10-blue: #edf5fc;
+$hmcts-tint10-navy: #e0e2ed;
+$hmcts-tint10-teal: #e9f3f6;
+$hmcts-tint10-lime: #f6f9ed;
+$hmcts-tint10-grass-green: #f0f6ed;
+$hmcts-tint10-magenta: #fdeff4;
+$hmcts-tint10-orchid: #efe6ee;
+$hmcts-tint10-rose-red: #f7e9ef;
+$hmcts-tint10-golden: #fff7eb;
+$hmcts-tint10-purple: #f0ecf7;
+$hmcts-tint10-grey: #f4f4f4;
+$hmcts-tint10-orange: #fef0e8;
+
+// 25% tints
+$hmcts-tint25-blue: #d1e4f7;
+$hmcts-tint25-navy: #b5bad0;
+$hmcts-tint25-teal: #c6e1e7;
+$hmcts-tint25-lime: #e8f0d0;
+$hmcts-tint25-grass-green: #d7e9d0;
+$hmcts-tint25-magenta: #fad6e1;
+$hmcts-tint25-orchid: #d7c3d4;
+$hmcts-tint25-rose-red: #ecc7d5;
+$hmcts-tint25-golden: #ffebcb;
+$hmcts-tint25-purple: #d9cfe8;
+$hmcts-tint25-grey: #e3e3e3;
+$hmcts-tint25-orange: #fcd9c4;
+
+// Semantic defaults for web UI
+$hmcts-colour-text: $hmcts-colour-black;
+$hmcts-colour-text-secondary: $hmcts-colour-grey;
+$hmcts-colour-link: $hmcts-colour-navy;
+$hmcts-colour-focus: $hmcts-colour-golden;
+
+// Semantic aliases (preferred for components)
+$hmcts-colour-primary: $hmcts-colour-blue;
+$hmcts-colour-primary-contrast: $hmcts-colour-white;
+$hmcts-colour-secondary: $hmcts-colour-navy;
+$hmcts-colour-secondary-contrast: $hmcts-colour-white;
+$hmcts-colour-success: $hmcts-colour-grass-green;
+$hmcts-colour-warning: $hmcts-colour-golden;
+$hmcts-colour-error: $hmcts-colour-rose-red;
+
+

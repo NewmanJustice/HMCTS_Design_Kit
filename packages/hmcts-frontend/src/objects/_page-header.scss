@@ -1,0 +1,28 @@
+@use "../tokens" as *;
+
+.hmcts-page-header {
+  margin-bottom: $hmcts-space-6;
+}
+
+.hmcts-page-header__caption {
+  display: block;
+  color: $hmcts-colour-text-secondary;
+  margin-bottom: $hmcts-space-2;
+}
+
+.hmcts-page-header__title {
+  margin: 0 0 $hmcts-space-3;
+  color: $hmcts-colour-navy;
+}
+
+.hmcts-page-header__intro {
+  margin: 0;
+  max-width: 65ch;
+}
+
+.hmcts-page-header__actions {
+  margin-top: $hmcts-space-4;
+  display: flex;
+  gap: $hmcts-space-2;
+  flex-wrap: wrap;
+}

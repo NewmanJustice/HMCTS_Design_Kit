@@ -1,0 +1,8 @@
+@use "../tokens" as *;
+
+.hmcts-inset-text {
+  border-left: 6px solid $hmcts-tint25-grey;
+  padding: $hmcts-space-3 $hmcts-space-4;
+  margin: 0 0 $hmcts-space-5;
+  background: $hmcts-tint10-grey;
+}

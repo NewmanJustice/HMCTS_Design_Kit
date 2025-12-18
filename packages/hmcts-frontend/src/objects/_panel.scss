@@ -1,0 +1,25 @@
+@use "../tokens" as *;
+
+.hmcts-panel {
+  border: 1px solid $hmcts-tint25-grey;
+  background: $hmcts-colour-white;
+  padding: $hmcts-space-4;
+  margin-bottom: $hmcts-space-5;
+}
+
+.hmcts-panel--tinted {
+  background: $hmcts-tint10-grey;
+}
+
+.hmcts-panel--emphasis {
+  border-left: 6px solid $hmcts-colour-secondary;
+}
+
+.hmcts-panel__title {
+  margin: 0 0 $hmcts-space-3;
+  font-weight: $hmcts-font-weight-bold;
+}
+
+.hmcts-panel__content {
+  margin: 0;
+}

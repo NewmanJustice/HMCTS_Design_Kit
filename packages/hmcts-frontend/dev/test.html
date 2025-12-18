@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../dist/hmcts.css" />
+    <title>HMCTS Frontend Test</title>
+  </head>
+  <body style="padding: 24px;">
+    <h1>Heading 1 – HMCTS navy</h1>
+    <h2>Heading 2 – black</h2>
+    <h3>Heading 3 – HMCTS navy</h3>
+    <h4>Heading 4 – HMCTS navy</h4>
+
+    <p>
+      Body copy in Arial. <a href="#">This is a link</a>.
+    </p>
+
+    <p class="hmcts-footnote">Footnote text</p>
+
+    <button class="hmcts-button">Continue</button>
+
+    <p>
+        <a href="#" class="hmcts-link">HMCTS styled link</a>
+    </p>
+    
+    <div class="hmcts-notification hmcts-notification--info" role="status">
+        <p class="hmcts-notification__title">Information</p>
+        <p class="hmcts-notification__content">This is an info message.</p>
+    </div>
+    <div class="hmcts-notification hmcts-notification--success" role="status">
+        <p class="hmcts-notification__title">Success</p>
+        <p class="hmcts-notification__content">Your changes have been saved.</p>
+    </div>
+    <div class="hmcts-notification hmcts-notification--warning" role="status">
+        <p class="hmcts-notification__title">Warning</p>
+        <p class="hmcts-notification__content">Check the details before continuing.</p>
+    </div>
+    <div class="hmcts-notification hmcts-notification--error" role="alert">
+        <p class="hmcts-notification__title">There is a problem</p>
+        <p class="hmcts-notification__content">Enter a case reference number.</p>
+    </div>
+    <div class="hmcts-form-group">
+      <label class="hmcts-label" for="case-id">Case ID</label>
+      <input class="hmcts-input" id="case-id" />
+    </div>
+    <div>
+      <p>What a validation error will look like</p>
+    </div>
+    <div class="hmcts-form-group hmcts-form-group--error">
+      <label class="hmcts-label" for="case-ref">Case reference</label>
+      <input class="hmcts-input" id="case-ref" />
+      <p class="hmcts-error-message">Enter a case reference</p>
+    </div>
+    <div class="hmcts-error-summary" role="alert" aria-labelledby="error-summary-title" tabindex="-1">
+      <h2 class="hmcts-error-summary__title" id="error-summary-title">There is a problem</h2>
+      <div class="hmcts-error-summary__body">
+        <p>Check the following:</p>
+        <ul class="hmcts-error-summary__list">
+          <li>
+            <a href="#case-ref">Enter a case reference</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="hmcts-container hmcts-u-pt-5 hmcts-u-pb-5">
+      <header class="hmcts-page-header">
+        <span class="hmcts-page-header__caption">This is a HMCTS container</span>
+        <h1 class="hmcts-page-header__title">Check case details</h1>
+        <p class="hmcts-page-header__intro">
+          Review the information below before continuing.
+        </p>
+        <div class="hmcts-page-header__actions">
+          <button class="hmcts-button">Continue</button>
+          <a class="hmcts-link" href="#">Cancel</a>
+        </div>
+      </header>
+      <h2 class="hmcts-u-section-title">Applicant details</h2>
+      <section class="hmcts-panel hmcts-panel--emphasis">
+        <h3 class="hmcts-panel__title">Contact information</h3>
+        <p class="hmcts-panel__content">
+          Email: example@example.com<br />
+          Phone: 07123 456 789
+        </p>
+      </section>
+      <section class="hmcts-panel hmcts-panel--tinted">
+        <h3 class="hmcts-panel__title">Notes</h3>
+        <p class="hmcts-panel__content">
+          This panel uses a light grey tint background.
+        </p>
+      </section>
+      <h2 class="hmcts-u-section-title">Case details</h2>
+    </div>
+    <div class="hmcts-container hmcts-u-pt-5 hmcts-u-pb-5">
+        <dl class="hmcts-summary-list">
+          <div class="hmcts-summary-list__row">
+          <dt class="hmcts-summary-list__key">Case reference</dt>
+          <dd class="hmcts-summary-list__value">1234-5678-ABCD</dd>
+          <dd class="hmcts-summary-list__actions">
+            <a class="hmcts-link hmcts-summary-list__action" href="#">Change</a>
+          </dd>
+        </div>
+        <div class="hmcts-summary-list__row">
+          <dt class="hmcts-summary-list__key">Applicant</dt>
+          <dd class="hmcts-summary-list__value">Jane Doe</dd>
+          <dd class="hmcts-summary-list__actions">
+            <a class="hmcts-link hmcts-summary-list__action" href="#">Change</a>
+          </dd>
+        </div>
+        <div class="hmcts-summary-list__row">
+          <dt class="hmcts-summary-list__key">Email</dt>
+          <dd class="hmcts-summary-list__value">jane.doe@example.com</dd>
+          <dd class="hmcts-summary-list__actions">
+            <a class="hmcts-link hmcts-summary-list__action" href="#">Change</a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <div class="hmcts-container hmcts-u-pt-5 hmcts-u-pb-5">
+      <div class="hmcts-inset-text">
+        You must provide accurate information. Providing false information may be a criminal offence.
+      </div>
+      <div class="hmcts-warning-text">
+        <span class="hmcts-warning-text__icon" aria-hidden="true">!</span>
+        <p class="hmcts-warning-text__text">
+          You have 10 minutes to complete this step before your session times out.
+        </p>
+      </div>
+    </div>
+    <div class="hmcts-container hmcts-u-pt-5 hmcts-u-pb-5"> 
+      <div class="hmcts-button-group">
+        <button class="hmcts-button">Continue</button>
+        <a class="hmcts-link hmcts-button-group__secondary" href="#">Save and come back later</a>
+        <a class="hmcts-link hmcts-button-group__secondary" href="#">Cancel</a>
+      </div>
+    </div>
+    <div class="hmcts-container hmcts-u-pt-5 hmcts-u-pb-5">
+      <div class="hmcts-stack">
+        <div class="hmcts-inset-text">Inset text example</div>
+        <div class="hmcts-warning-text">
+          <span class="hmcts-warning-text__icon" aria-hidden="true">!</span>
+          <p class="hmcts-warning-text__text">Warning example</p>
+        </div>
+        <div class="hmcts-button-group">
+          <button class="hmcts-button">Continue</button>
+          <a class="hmcts-link hmcts-button-group__secondary" href="#">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

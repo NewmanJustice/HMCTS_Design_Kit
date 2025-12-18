@@ -1,0 +1,13 @@
+@use "../tokens" as *;
+
+.hmcts-stack > * + * {
+  margin-top: $hmcts-space-4;
+}
+
+.hmcts-stack--tight > * + * {
+  margin-top: $hmcts-space-2;
+}
+
+.hmcts-stack--loose > * + * {
+  margin-top: $hmcts-space-6;
+}

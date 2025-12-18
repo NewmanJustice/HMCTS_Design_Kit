@@ -1,0 +1,18 @@
+@use "../tokens" as *;
+@use "../tools" as *;
+
+.hmcts-link {
+  display: inline-flex;
+  align-items: center;
+  color: $hmcts-colour-link;
+  text-decoration: underline;
+  font-weight: $hmcts-font-weight-regular;
+}
+
+.hmcts-link:focus {
+  outline: none;
+}
+
+.hmcts-link:focus-visible {
+  @include hmcts-focus-ring;
+}

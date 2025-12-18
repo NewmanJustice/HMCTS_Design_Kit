@@ -1,0 +1,27 @@
+@use "../tokens" as *;
+@use "../tools" as *;
+
+.hmcts-button {
+  font-family: $hmcts-font-family-base;
+  font-size: $hmcts-font-size-body;
+  font-weight: $hmcts-font-weight-bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $hmcts-space-2 $hmcts-space-4;
+  min-height: 44px; // good touch target size
+  border: 0;
+  cursor: pointer;
+  background: $hmcts-colour-primary;
+  color: $hmcts-colour-primary-contrast;
+  line-height: 1; // prevents vertical misalignment
+
+    &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include hmcts-focus-ring;
+  }
+
+}

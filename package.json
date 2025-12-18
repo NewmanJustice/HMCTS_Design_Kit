@@ -1,0 +1,10 @@
+{
+  "name": "hmcts-design-kit",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "npm -w @hmcts/hmcts-frontend run build",
+    "dev": "npm -w @hmcts/hmcts-frontend run dev",
+    "lint": "npm -w @hmcts/hmcts-frontend run lint"
+  }
+}

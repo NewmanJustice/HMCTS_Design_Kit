@@ -1,0 +1,6 @@
+@use "../tokens" as *;
+
+@mixin hmcts-focus-ring {
+  outline: 3px solid $hmcts-colour-focus;
+  outline-offset: 2px;
+}

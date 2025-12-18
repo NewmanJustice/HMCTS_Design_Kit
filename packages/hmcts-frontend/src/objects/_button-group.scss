@@ -1,0 +1,13 @@
+@use "../tokens" as *;
+
+.hmcts-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $hmcts-space-3;
+}
+
+.hmcts-button-group__secondary {
+  display: inline-flex;
+  align-items: center;
+}

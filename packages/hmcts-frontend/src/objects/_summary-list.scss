@@ -1,0 +1,46 @@
+@use "../tokens" as *;
+
+.hmcts-summary-list {
+  margin: 0 0 $hmcts-space-5;
+  padding: 0;
+}
+
+.hmcts-summary-list__row {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: $hmcts-space-2 $hmcts-space-4;
+  padding: $hmcts-space-3 0;
+  border-bottom: 1px solid $hmcts-tint25-grey;
+}
+
+.hmcts-summary-list__key {
+  font-weight: $hmcts-font-weight-bold;
+}
+
+.hmcts-summary-list__value {
+  margin: 0;
+}
+
+.hmcts-summary-list__actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.hmcts-summary-list__action {
+  margin-left: $hmcts-space-2;
+}
+
+@media (max-width: 640px) {
+  .hmcts-summary-list__row {
+    grid-template-columns: 1fr;
+  }
+
+  .hmcts-summary-list__actions {
+    text-align: left;
+  }
+
+  .hmcts-summary-list__action {
+    margin-left: 0;
+    margin-right: $hmcts-space-2;
+  }
+}

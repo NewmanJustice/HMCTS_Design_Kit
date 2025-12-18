@@ -1,0 +1,35 @@
+@use "../tokens" as *;
+
+.hmcts-form-group {
+  margin-bottom: $hmcts-space-5;
+}
+
+.hmcts-label {
+  display: block;
+  font-weight: $hmcts-font-weight-bold;
+  margin-bottom: $hmcts-space-2;
+}
+
+.hmcts-input {
+  font-family: $hmcts-font-family-base;
+  font-size: $hmcts-font-size-body;
+  padding: $hmcts-space-2;
+  border: 2px solid $hmcts-colour-black;
+  width: 100%;
+  max-width: 400px;
+}
+
+.hmcts-input:focus {
+  outline: 3px solid $hmcts-colour-focus;
+  outline-offset: 0;
+}
+
+.hmcts-error-message {
+  color: $hmcts-colour-error;
+  font-weight: $hmcts-font-weight-bold;
+  margin-top: $hmcts-space-2;
+}
+
+.hmcts-form-group--error .hmcts-input {
+  border-color: $hmcts-colour-error;
+}

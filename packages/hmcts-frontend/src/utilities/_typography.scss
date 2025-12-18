@@ -1,0 +1,8 @@
+@use "../tokens" as *;
+
+.hmcts-u-section-title {
+  font-size: $hmcts-font-size-h3;
+  line-height: $hmcts-line-height-heading;
+  color: $hmcts-colour-navy;
+  margin: 0 0 $hmcts-space-3;
+}

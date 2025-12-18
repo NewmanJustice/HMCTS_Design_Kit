@@ -1,0 +1,13 @@
+@use "../tokens" as *;
+
+.hmcts-u-mt-0 { margin-top: 0; }
+.hmcts-u-mb-0 { margin-bottom: 0; }
+
+.hmcts-u-mt-3 { margin-top: $hmcts-space-3; }
+.hmcts-u-mb-3 { margin-bottom: $hmcts-space-3; }
+
+.hmcts-u-mt-5 { margin-top: $hmcts-space-5; }
+.hmcts-u-mb-5 { margin-bottom: $hmcts-space-5; }
+
+.hmcts-u-pt-5 { padding-top: $hmcts-space-5; }
+.hmcts-u-pb-5 { padding-bottom: $hmcts-space-5; }

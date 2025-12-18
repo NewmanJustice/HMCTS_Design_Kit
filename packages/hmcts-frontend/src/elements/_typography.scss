@@ -1,0 +1,19 @@
+@use "../tokens" as *;
+
+html {
+  font-family: $hmcts-font-family-base;
+}
+
+body {
+  font-size: $hmcts-font-size-body;
+  line-height: $hmcts-line-height-body;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+small, .hmcts-footnote {
+  font-size: $hmcts-font-size-footnote;
+}

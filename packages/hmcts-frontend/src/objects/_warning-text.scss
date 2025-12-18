@@ -1,0 +1,29 @@
+@use "../tokens" as *;
+
+.hmcts-warning-text {
+  display: flex;
+  gap: $hmcts-space-3;
+  padding: $hmcts-space-3 $hmcts-space-4;
+  margin: 0 0 $hmcts-space-5;
+  border: 2px solid $hmcts-colour-warning;
+  background: $hmcts-tint10-golden;
+  align-items: flex-start;
+}
+
+.hmcts-warning-text__icon {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: $hmcts-colour-warning;
+  color: $hmcts-colour-black;
+  font-weight: $hmcts-font-weight-bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.hmcts-warning-text__text {
+  margin: 0;
+}

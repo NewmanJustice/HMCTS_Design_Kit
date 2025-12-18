@@ -1,0 +1,9 @@
+@use "../tokens" as *;
+
+.hmcts-container {
+  max-width: $hmcts-container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $hmcts-container-gutter;
+  padding-right: $hmcts-container-gutter;
+}
