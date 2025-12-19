@@ -1,0 +1,9 @@
+@use "../tokens" as *;
+
+.hmcts-code-sample__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $hmcts-space-3;
+  margin-bottom: $hmcts-space-3;
+}

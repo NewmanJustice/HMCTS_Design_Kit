@@ -1,0 +1,42 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/component-template.njk" import componentPage %}
+
+{% block content %}
+  {{ componentPage({
+    title: "Form input",
+    intro: "Use form inputs to capture user information, with clear error messaging when validation fails.",
+    exampleHtml: '
+      <div class="hmcts-stack">
+        <div class="hmcts-form-group">
+          <label class="hmcts-label" for="case-ref-ok">Case reference</label>
+          <input class="hmcts-input" id="case-ref-ok" />
+        </div>
+
+        <div class="hmcts-form-group hmcts-form-group--error">
+          <label class="hmcts-label" for="case-ref-error">Case reference</label>
+          <input class="hmcts-input" id="case-ref-error" />
+          <p class="hmcts-error-message">Enter a case reference</p>
+        </div>
+      </div>
+    ',
+    markup: '<div class="hmcts-form-group">
+  <label class="hmcts-label" for="case-ref">Case reference</label>
+  <input class="hmcts-input" id="case-ref" />
+</div>
+
+<div class="hmcts-form-group hmcts-form-group--error">
+  <label class="hmcts-label" for="case-ref-error">Case reference</label>
+  <input class="hmcts-input" id="case-ref-error" />
+  <p class="hmcts-error-message">Enter a case reference</p>
+</div>',
+    guidance: {
+      whenToUse: [
+        "For text entry in forms (names, references, emails, etc.).",
+        "With an associated label and (where needed) error message."
+      ],
+      whenNotToUse: [
+        "When the user should pick from a small set of known options (use radios/selects)."
+      ]
+    }
+  }) }}
+{% endblock %}

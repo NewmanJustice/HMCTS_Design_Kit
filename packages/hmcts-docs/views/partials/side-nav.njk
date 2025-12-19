@@ -1,0 +1,58 @@
+<nav class="hmcts-side-nav" aria-label="Design system navigation">
+  <p class="hmcts-side-nav__title">Docs</p>
+  <ul class="hmcts-side-nav__list">
+    <li class="hmcts-side-nav__item">
+      <a class="hmcts-side-nav__link" href="/"
+        {% if activeSideNav == "overview" %}aria-current="page"{% endif %}>
+        Overview
+      </a>
+    </li>
+    <li class="hmcts-side-nav__item">
+      <a class="hmcts-side-nav__link" href="/layout"
+        {% if activeSideNav == "layout-index" %}aria-current="page"{% endif %}>
+        Layout index
+      </a>
+    </li>
+    <li class="hmcts-side-nav__item">
+      <a class="hmcts-side-nav__link" href="/components"
+        {% if activeSideNav == "components-index" %}aria-current="page"{% endif %}>
+        Components index
+      </a>
+    </li>
+    <li class="hmcts-side-nav__item">
+      <a class="hmcts-side-nav__link" href="/patterns"
+        {% if activeSideNav == "patterns-index" %}aria-current="page"{% endif %}>
+        Patterns index
+      </a>
+    </li>
+  </ul>
+  <p class="hmcts-side-nav__title hmcts-u-mt-5">Components</p>
+  <ul class="hmcts-side-nav__list">
+    {% for group in nav.groupedComponents %}
+      <p class="hmcts-side-nav__title hmcts-u-mt-5">{{ group.title }}</p>
+      <ul class="hmcts-side-nav__list">
+        {% for c in group.items %}
+          <li class="hmcts-side-nav__item">
+            <a class="hmcts-side-nav__link"
+              href="{{ c.href }}"
+              {% if activeSideNav == c.slug %}aria-current="page"{% endif %}>
+              {{ c.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+    <p class="hmcts-side-nav__title hmcts-u-mt-5">Patterns</p>
+    <ul class="hmcts-side-nav__list">
+      {% for p in nav.patterns %}
+        <li class="hmcts-side-nav__item">
+          <a class="hmcts-side-nav__link"
+            href="{{ p.href }}"
+            {% if activeSideNav == p.slug %}aria-current="page"{% endif %}>
+            {{ p.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </ul>
+</nav>

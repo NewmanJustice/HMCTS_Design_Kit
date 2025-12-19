@@ -1,0 +1,31 @@
+@use "../tokens" as *;
+@use "../tools" as *;
+
+.hmcts-copy-button {
+  font-family: $hmcts-font-family-base;
+  font-size: $hmcts-font-size-footnote;
+  font-weight: $hmcts-font-weight-bold;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: $hmcts-space-2 $hmcts-space-3;
+  border: 1px solid $hmcts-tint25-grey;
+  background: $hmcts-colour-white;
+  color: $hmcts-colour-text;
+
+  cursor: pointer;
+}
+
+.hmcts-copy-button:focus {
+  outline: none;
+}
+
+.hmcts-copy-button:focus-visible {
+  @include hmcts-focus-ring;
+}
+
+.hmcts-copy-button:hover {
+  border-color: $hmcts-colour-text-secondary;
+}

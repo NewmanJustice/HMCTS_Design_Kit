@@ -1,0 +1,42 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/pattern-template.njk" import patternPage %}
+
+{% block content %}
+{{ patternPage({
+  title: "Form with errors",
+  intro: "Show an error summary at the top of the page and inline errors next to the fields that need fixing.",
+  example: '
+    <div class="hmcts-stack">
+      <div class="hmcts-error-summary" role="alert" aria-labelledby="error-summary-title" tabindex="-1">
+        <h2 class="hmcts-error-summary__title" id="error-summary-title">There is a problem</h2>
+        <div class="hmcts-error-summary__body">
+          <p>Check the following:</p>
+          <ul class="hmcts-error-summary__list">
+            <li><a href="#case-ref">Enter a case reference</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hmcts-form-group hmcts-form-group--error">
+        <label class="hmcts-label" for="case-ref">Case reference</label>
+        <input class="hmcts-input" id="case-ref" />
+        <p class="hmcts-error-message">Enter a case reference</p>
+      </div>
+
+      <div class="hmcts-button-group">
+        <button class="hmcts-button">Continue</button>
+        <a class="hmcts-link hmcts-button-group__secondary" href="#">Cancel</a>
+      </div>
+    </div>
+  ',
+  whenToUse: [
+    "When the user submits a page and there are validation errors.",
+    "When users need clear navigation from the error summary to the fields to correct."
+  ],
+  buildingBlocks: [
+    { label: "Error summary", href: "/components/error-summary" },
+    { label: "Form input", href: "/components/forms" },
+    { label: "Button group", href: "/components/button" }
+ ]
+
+}) }}
+{% endblock %}

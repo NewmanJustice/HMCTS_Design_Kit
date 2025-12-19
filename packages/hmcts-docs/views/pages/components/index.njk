@@ -1,0 +1,26 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <header class="hmcts-page-header">
+    <span class="hmcts-page-header__caption">Section</span>
+    <h1 class="hmcts-page-header__title">Components</h1>
+    <p class="hmcts-page-header__intro">
+      Reusable UI components and patterns in the HMCTS frontend package.
+    </p>
+  </header>
+
+  <div class="hmcts-stack">
+    <section class="hmcts-panel">
+      <h2 class="hmcts-u-section-title">Available components</h2>
+      <ul>
+        {% for group in nav.groupedComponents %}
+          {% if group.title == "Components" %}
+            {% for c in group.items %}
+              <li><a class="hmcts-link" href="{{ c.href }}">{{ c.title }}</a></li>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+{% endblock %}

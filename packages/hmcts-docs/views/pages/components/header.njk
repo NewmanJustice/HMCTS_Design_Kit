@@ -1,0 +1,54 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/component-template.njk" import componentPage %}
+
+{% block content %}
+  {{ componentPage({
+    title: "Header (top navigation)",
+    intro: "Use the header to provide consistent branding and top-level navigation.",
+    exampleHtml: '
+      <header class="hmcts-header">
+        <div class="hmcts-container">
+          <div class="hmcts-header__inner">
+            <a class="hmcts-header__brand" href="#">
+              <span class="hmcts-header__title">HMCTS Design System (Dev)</span>
+            </a>
+
+            <nav aria-label="Top navigation">
+              <ul class="hmcts-top-nav">
+                <li><a class="hmcts-top-nav__link" aria-current="page" href="#">Overview</a></li>
+                <li><a class="hmcts-top-nav__link" href="#">Components</a></li>
+                <li><a class="hmcts-top-nav__link" href="#">Patterns</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    ',
+    markup: '<header class="hmcts-header">
+  <div class="hmcts-container">
+    <div class="hmcts-header__inner">
+      <a class="hmcts-header__brand" href="/">
+        <span class="hmcts-header__title">Service name</span>
+      </a>
+
+      <nav aria-label="Top navigation">
+        <ul class="hmcts-top-nav">
+          <li><a class="hmcts-top-nav__link" aria-current="page" href="/">Overview</a></li>
+          <li><a class="hmcts-top-nav__link" href="/components/button">Components</a></li>
+          <li><a class="hmcts-top-nav__link" href="/patterns">Patterns</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>',
+    guidance: {
+      whenToUse: [
+        "On all pages to provide consistent navigation.",
+        "When a user needs to move between top-level sections."
+      ],
+      whenNotToUse: [
+        "When building a very minimal single-page flow with no navigation."
+      ]
+    }
+  }) }}
+{% endblock %}

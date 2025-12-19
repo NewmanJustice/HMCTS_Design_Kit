@@ -1,0 +1,46 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/component-template.njk" import componentPage %}
+
+{% block content %}
+  {{ componentPage({
+    title: "Error summary",
+    intro: "Use an error summary at the top of the page when there are validation errors.",
+    exampleHtml: '
+      <div class="hmcts-stack">
+        <div class="hmcts-error-summary" role="alert" aria-labelledby="error-summary-title" tabindex="-1">
+          <h2 class="hmcts-error-summary__title" id="error-summary-title">There is a problem</h2>
+          <div class="hmcts-error-summary__body">
+            <p>Check the following:</p>
+            <ul class="hmcts-error-summary__list">
+              <li><a href="#case-ref">Enter a case reference</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hmcts-form-group hmcts-form-group--error">
+          <label class="hmcts-label" for="case-ref">Case reference</label>
+          <input class="hmcts-input" id="case-ref" />
+          <p class="hmcts-error-message">Enter a case reference</p>
+        </div>
+      </div>
+    ',
+    markup: '<div class="hmcts-error-summary" role="alert" aria-labelledby="error-summary-title" tabindex="-1">
+  <h2 class="hmcts-error-summary__title" id="error-summary-title">There is a problem</h2>
+  <div class="hmcts-error-summary__body">
+    <p>Check the following:</p>
+    <ul class="hmcts-error-summary__list">
+      <li><a href="#case-ref">Enter a case reference</a></li>
+    </ul>
+  </div>
+</div>',
+    guidance: {
+      whenToUse: [
+        "When the user submits a page with one or more validation errors.",
+        "To link directly to the fields that need fixing."
+      ],
+      whenNotToUse: [
+        "For single inline errors when there is no submission step."
+      ]
+    }
+  }) }}
+{% endblock %}

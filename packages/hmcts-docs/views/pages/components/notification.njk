@@ -1,0 +1,62 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/component-template.njk" import componentPage %}
+
+{% block content %}
+  {{ componentPage({
+    title: "Notification",
+    intro: "Use notifications to communicate important status information to users.",
+    exampleHtml: '
+      <div class="hmcts-stack">
+        <div class="hmcts-notification hmcts-notification--info" role="status">
+          <p class="hmcts-notification__title">Information</p>
+          <p class="hmcts-notification__content">This is an info message.</p>
+        </div>
+
+        <div class="hmcts-notification hmcts-notification--success" role="status">
+          <p class="hmcts-notification__title">Success</p>
+          <p class="hmcts-notification__content">Your changes have been saved.</p>
+        </div>
+
+        <div class="hmcts-notification hmcts-notification--warning" role="status">
+          <p class="hmcts-notification__title">Warning</p>
+          <p class="hmcts-notification__content">Check the details before continuing.</p>
+        </div>
+
+        <div class="hmcts-notification hmcts-notification--error" role="alert">
+          <p class="hmcts-notification__title">There is a problem</p>
+          <p class="hmcts-notification__content">Enter a case reference number.</p>
+        </div>
+      </div>
+    ',
+    markup: '<div class="hmcts-notification hmcts-notification--info" role="status">
+  <p class="hmcts-notification__title">Information</p>
+  <p class="hmcts-notification__content">This is an info message.</p>
+</div>
+
+<div class="hmcts-notification hmcts-notification--success" role="status">
+  <p class="hmcts-notification__title">Success</p>
+  <p class="hmcts-notification__content">Your changes have been saved.</p>
+</div>
+
+<div class="hmcts-notification hmcts-notification--warning" role="status">
+  <p class="hmcts-notification__title">Warning</p>
+  <p class="hmcts-notification__content">Check the details before continuing.</p>
+</div>
+
+<div class="hmcts-notification hmcts-notification--error" role="alert">
+  <p class="hmcts-notification__title">There is a problem</p>
+  <p class="hmcts-notification__content">Enter a case reference number.</p>
+</div>',
+    guidance: {
+      whenToUse: [
+        "To confirm an action succeeded.",
+        "To warn the user about consequences or risks.",
+        "To highlight errors that need user action."
+      ],
+      whenNotToUse: [
+        "For general page content (use headings/paragraphs instead).",
+        "For non-essential information that adds noise."
+      ]
+    }
+  }) }}
+{% endblock %}

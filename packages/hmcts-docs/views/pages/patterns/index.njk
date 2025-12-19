@@ -1,0 +1,22 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<header class="hmcts-page-header">
+  <span class="hmcts-page-header__caption">Section</span>
+  <h1 class="hmcts-page-header__title">Patterns</h1>
+  <p class="hmcts-page-header__intro">
+    Common page-level patterns built using HMCTS components.
+  </p>
+</header>
+
+<section class="hmcts-panel">
+  <h2 class="hmcts-u-section-title">Available patterns</h2>
+  <ul>
+    {% for p in nav.patterns %}
+      <li>
+        <a class="hmcts-link" href="{{ p.href }}">{{ p.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

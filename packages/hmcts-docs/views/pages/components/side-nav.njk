@@ -1,0 +1,45 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/component-template.njk" import componentPage %}
+
+{% block content %}
+  {{ componentPage({
+    title: "Side navigation",
+    intro: "Use side navigation to help users browse within a section, such as component documentation.",
+    exampleHtml: '
+      <nav class="hmcts-side-nav" aria-label="Design system navigation">
+        <p class="hmcts-side-nav__title">Components</p>
+        <ul class="hmcts-side-nav__list">
+          <li class="hmcts-side-nav__item">
+            <a class="hmcts-side-nav__link" aria-current="page" href="#">Button</a>
+          </li>
+          <li class="hmcts-side-nav__item">
+            <a class="hmcts-side-nav__link" href="#">Summary list</a>
+          </li>
+          <li class="hmcts-side-nav__item">
+            <a class="hmcts-side-nav__link" href="#">Error summary</a>
+          </li>
+        </ul>
+      </nav>
+    ',
+    markup: '<nav class="hmcts-side-nav" aria-label="Section navigation">
+  <p class="hmcts-side-nav__title">Components</p>
+  <ul class="hmcts-side-nav__list">
+    <li class="hmcts-side-nav__item">
+      <a class="hmcts-side-nav__link" aria-current="page" href="/components/button">Button</a>
+    </li>
+    <li class="hmcts-side-nav__item">
+      <a class="hmcts-side-nav__link" href="/components/summary-list">Summary list</a>
+    </li>
+  </ul>
+</nav>',
+    guidance: {
+      whenToUse: [
+        "On content-heavy sections with many pages (docs, guidance, admin sections).",
+        "When users need quick access to sibling pages."
+      ],
+      whenNotToUse: [
+        "For primary navigation across a service (use the header/top navigation)."
+      ]
+    }
+  }) }}
+{% endblock %}

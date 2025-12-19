@@ -1,0 +1,27 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/component-template.njk" import componentPage %}
+
+{% block content %}
+  {{ componentPage({
+    title: "Inset text",
+    intro: "Use inset text to draw attention to important information related to the current task.",
+    exampleHtml: '
+      <div class="hmcts-inset-text">
+        You must provide accurate information. Providing false information may be a criminal offence.
+      </div>
+    ',
+    markup: '<div class="hmcts-inset-text">
+  You must provide accurate information. Providing false information may be a criminal offence.
+</div>',
+    guidance: {
+      whenToUse: [
+        "To highlight important supporting information.",
+        "When content is relevant but not the main focus of the page."
+      ],
+      whenNotToUse: [
+        "For warnings or urgent messages (use warning text instead).",
+        "For general page content."
+      ]
+    }
+  }) }}
+{% endblock %}

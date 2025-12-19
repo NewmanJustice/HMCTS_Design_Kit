@@ -1,0 +1,33 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/pattern-template.njk" import patternPage %}
+
+{% block content %}
+{{ patternPage({
+  title: "Check your answers",
+  intro: "Allow users to review their information before submitting.",
+  example: '
+    <dl class="hmcts-summary-list">
+      <div class="hmcts-summary-list__row">
+        <dt class="hmcts-summary-list__key">Case reference</dt>
+        <dd class="hmcts-summary-list__value">1234-5678</dd>
+        <dd class="hmcts-summary-list__actions">
+          <a class="hmcts-link" href="#">Change</a>
+        </dd>
+      </div>
+    </dl>
+
+    <div class="hmcts-button-group">
+      <button class="hmcts-button">Confirm and submit</button>
+      <a class="hmcts-link hmcts-button-group__secondary" href="#">Back</a>
+    </div>
+  ',
+  whenToUse: [
+    "Before final submission of a form",
+    "When users may need to correct previous answers"
+  ],
+  buildingBlocks: [
+  { label: "Summary list", href: "/components/summary-list" },
+  { label: "Button group", href: "/components/button" }
+] 
+}) }}
+{% endblock %}

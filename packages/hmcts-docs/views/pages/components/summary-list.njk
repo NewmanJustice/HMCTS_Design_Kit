@@ -1,0 +1,45 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/component-template.njk" import componentPage %}
+
+{% block content %}
+  {{ componentPage({
+    title: "Summary list",
+    intro: "Use a summary list to show key/value pairs, often with actions to change answers.",
+    exampleHtml: '
+      <dl class="hmcts-summary-list">
+        <div class="hmcts-summary-list__row">
+          <dt class="hmcts-summary-list__key">Case reference</dt>
+          <dd class="hmcts-summary-list__value">1234-5678-ABCD</dd>
+          <dd class="hmcts-summary-list__actions">
+            <a class="hmcts-link hmcts-summary-list__action" href="#">Change</a>
+          </dd>
+        </div>
+        <div class="hmcts-summary-list__row">
+          <dt class="hmcts-summary-list__key">Applicant</dt>
+          <dd class="hmcts-summary-list__value">Jane Doe</dd>
+          <dd class="hmcts-summary-list__actions">
+            <a class="hmcts-link hmcts-summary-list__action" href="#">Change</a>
+          </dd>
+        </div>
+      </dl>
+    ',
+    markup: '<dl class="hmcts-summary-list">
+  <div class="hmcts-summary-list__row">
+    <dt class="hmcts-summary-list__key">Case reference</dt>
+    <dd class="hmcts-summary-list__value">1234-5678-ABCD</dd>
+    <dd class="hmcts-summary-list__actions">
+      <a class="hmcts-link hmcts-summary-list__action" href="#">Change</a>
+    </dd>
+  </div>
+</dl>',
+    guidance: {
+      whenToUse: [
+        "On ‘Check your answers’ pages.",
+        "To present read-only details in a consistent structure."
+      ],
+      whenNotToUse: [
+        "For large datasets (use a table instead)."
+      ]
+    }
+  }) }}
+{% endblock %}

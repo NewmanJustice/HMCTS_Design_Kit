@@ -1,0 +1,64 @@
+{% macro componentPage(data) %}
+
+<header class="hmcts-page-header">
+  <span class="hmcts-page-header__caption">Component</span>
+  <h1 class="hmcts-page-header__title">{{ data.title }}</h1>
+  {% if data.intro %}
+    <p class="hmcts-page-header__intro">{{ data.intro }}</p>
+  {% endif %}
+</header>
+
+<div class="hmcts-stack">
+
+  {% if data.exampleHtml %}
+  <section class="hmcts-panel hmcts-panel--tinted">
+    <h2 class="hmcts-u-section-title">Example</h2>
+    {{ data.exampleHtml | safe }}
+  </section>
+  {% endif %}
+
+{% if data.markup %}
+  <section class="hmcts-panel">
+        <div class="hmcts-code-sample__header">
+        <h2 class="hmcts-u-section-title">Markup</h2>
+        <button
+            type="button"
+            class="hmcts-copy-button"
+            data-copy-target="markup"
+            aria-label="Copy markup to clipboard">
+            Copy
+        </button>
+        </div>
+        <pre class="hmcts-code-block"><code data-copy-source="markup">{{ data.markup }}</code></pre>
+        <p class="hmcts-footer__text" aria-live="polite" data-copy-status="markup"></p>
+    </section>
+  {% endif %}
+
+
+  {% if data.guidance %}
+  <section class="hmcts-panel">
+    <h2 class="hmcts-u-section-title">Guidance</h2>
+
+    {% if data.guidance.whenToUse and data.guidance.whenToUse.length %}
+      <h3 class="hmcts-panel__title">When to use</h3>
+      <ul>
+        {% for item in data.guidance.whenToUse %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if data.guidance.whenNotToUse and data.guidance.whenNotToUse.length %}
+      <h3 class="hmcts-panel__title">When not to use</h3>
+      <ul>
+        {% for item in data.guidance.whenNotToUse %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </section>
+  {% endif %}
+
+</div>
+
+{% endmacro %}

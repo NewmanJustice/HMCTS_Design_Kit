@@ -1,0 +1,33 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/component-template.njk" import componentPage %}
+
+{% block content %}
+  {{ componentPage({
+    title: "Warning text",
+    intro: "Use warning text to tell users about something important that could affect their task.",
+    exampleHtml: '
+      <div class="hmcts-warning-text">
+        <span class="hmcts-warning-text__icon" aria-hidden="true">!</span>
+        <p class="hmcts-warning-text__text">
+          You have 10 minutes to complete this step before your session times out.
+        </p>
+      </div>
+    ',
+    markup: '<div class="hmcts-warning-text">
+  <span class="hmcts-warning-text__icon" aria-hidden="true">!</span>
+  <p class="hmcts-warning-text__text">
+    You have 10 minutes to complete this step before your session times out.
+  </p>
+</div>',
+    guidance: {
+      whenToUse: [
+        "When users need to be aware of risks or time limits.",
+        "To warn users before they take an irreversible action."
+      ],
+      whenNotToUse: [
+        "For validation errors (use error summary or inline errors).",
+        "For non-critical information."
+      ]
+    }
+  }) }}
+{% endblock %}

@@ -1,0 +1,39 @@
+<header class="hmcts-header">
+  <div class="hmcts-container">
+    <div class="hmcts-header__inner">
+      <a class="hmcts-header__brand" href="/">
+        <span class="hmcts-header__title">HMCTS Design System (Dev)</span>
+      </a>
+      <nav aria-label="Top navigation">
+        <ul class="hmcts-top-nav">
+          <li>
+            <a class="hmcts-top-nav__link" href="/"
+              {% if activeTopNav == "overview" %}aria-current="page"{% endif %}>
+              Overview
+            </a>
+          </li>
+
+          <li>
+            <a class="hmcts-top-nav__link" href="/layout"
+              {% if activeTopNav == "layout" %}aria-current="page"{% endif %}>
+              Layout
+            </a>
+          </li>
+
+          <li>
+            <a class="hmcts-top-nav__link" href="/components"
+              {% if activeTopNav == "components" %}aria-current="page"{% endif %}>
+              Components
+            </a>
+          </li>
+          <li>
+            <a class="hmcts-top-nav__link" href="/patterns"
+              {% if activeTopNav == "patterns" %}aria-current="page"{% endif %}>
+              Patterns
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

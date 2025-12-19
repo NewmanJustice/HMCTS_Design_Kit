@@ -7,10 +7,19 @@
   align-items: start;
 }
 
+/* Sidebar stays on grey page background */
 .hmcts-docs-layout__sidebar {
   position: sticky;
   top: $hmcts-space-5;
 }
+
+/* Main content is a white surface */
+.hmcts-docs-layout > main {
+  background: $hmcts-colour-white;
+  padding: $hmcts-space-5;
+  border-left: 1px solid $hmcts-tint25-grey;
+}
+
 
 @media (max-width: 900px) {
   .hmcts-docs-layout {

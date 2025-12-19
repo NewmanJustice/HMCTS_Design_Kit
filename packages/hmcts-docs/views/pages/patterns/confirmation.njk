@@ -1,0 +1,58 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/pattern-template.njk" import patternPage %}
+
+{% block content %}
+{{ patternPage({
+  title: "Confirmation page",
+  intro: "Confirm that a user’s action has completed successfully and explain what happens next.",
+  example: '
+    <div class="hmcts-stack">
+
+      <div class="hmcts-notification hmcts-notification--success" role="status">
+        <p class="hmcts-notification__title">Application submitted</p>
+        <p class="hmcts-notification__content">
+          Your reference number is <strong>ABC123</strong>.
+        </p>
+      </div>
+
+      <section class="hmcts-panel">
+        <h2 class="hmcts-u-section-title">What happens next</h2>
+        <p>
+          We have sent a confirmation email. We will contact you if we need more information.
+        </p>
+      </section>
+
+      <section class="hmcts-panel hmcts-panel--tinted">
+        <h2 class="hmcts-u-section-title">Details</h2>
+        <dl class="hmcts-summary-list">
+          <div class="hmcts-summary-list__row">
+            <dt class="hmcts-summary-list__key">Case reference</dt>
+            <dd class="hmcts-summary-list__value">ABC123</dd>
+            <dd class="hmcts-summary-list__actions"></dd>
+          </div>
+          <div class="hmcts-summary-list__row">
+            <dt class="hmcts-summary-list__key">Submitted</dt>
+            <dd class="hmcts-summary-list__value">Today</dd>
+            <dd class="hmcts-summary-list__actions"></dd>
+          </div>
+        </dl>
+      </section>
+
+      <div class="hmcts-button-group">
+        <a class="hmcts-link hmcts-button-group__secondary" href="#">Return to start</a>
+      </div>
+
+    </div>
+  ',
+  whenToUse: [
+    "After the user completes a key action such as submitting an application or payment.",
+    "When the user needs a reference number or next steps."
+  ],
+  buildingBlocks: [
+  { label: "Notification", href: "/components/notification" },
+  { label: "Summary list", href: "/components/summary-list" },
+  { label: "Button group", href: "/components/button" }
+  ]
+
+}) }}
+{% endblock %}

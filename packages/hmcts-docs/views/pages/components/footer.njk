@@ -1,0 +1,50 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/component-template.njk" import componentPage %}
+
+{% block content %}
+  {{ componentPage({
+    title: "Footer",
+    intro: "Use the footer to provide supporting links and clear internal or legal information.",
+    exampleHtml: '
+      <footer class="hmcts-footer">
+        <div class="hmcts-container hmcts-footer__inner">
+          <div class="hmcts-footer__meta">
+            <ul class="hmcts-footer-nav">
+              <li><a class="hmcts-footer-nav__link" href="#">Overview</a></li>
+              <li><a class="hmcts-footer-nav__link" href="#">Components</a></li>
+              <li><a class="hmcts-footer-nav__link" href="#">Patterns</a></li>
+            </ul>
+
+            <p class="hmcts-footer__text">
+              Internal development documentation — not for public use
+            </p>
+          </div>
+        </div>
+      </footer>
+    ',
+    markup: '<footer class="hmcts-footer">
+  <div class="hmcts-container hmcts-footer__inner">
+    <div class="hmcts-footer__meta">
+      <ul class="hmcts-footer-nav">
+        <li><a class="hmcts-footer-nav__link" href="/">Overview</a></li>
+        <li><a class="hmcts-footer-nav__link" href="/components/button">Components</a></li>
+        <li><a class="hmcts-footer-nav__link" href="/patterns">Patterns</a></li>
+      </ul>
+
+      <p class="hmcts-footer__text">
+        Internal development documentation — not for public use
+      </p>
+    </div>
+  </div>
+</footer>',
+    guidance: {
+      whenToUse: [
+        "At the bottom of every page for consistency.",
+        "To provide supporting links and status/disclaimer information."
+      ],
+      whenNotToUse: [
+        "As the only place for critical navigation (keep key navigation in the header)."
+      ]
+    }
+  }) }}
+{% endblock %}

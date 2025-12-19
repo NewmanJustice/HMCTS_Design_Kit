@@ -1,0 +1,29 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/component-template.njk" import componentPage %}
+
+{% block content %}
+  {{ componentPage({
+    title: "Button",
+    intro: "Use buttons to help users take action.",
+    exampleHtml: '
+      <div class="hmcts-button-group">
+        <button class="hmcts-button">Continue</button>
+        <a class="hmcts-link hmcts-button-group__secondary" href="#">Cancel</a>
+      </div>
+    ',
+    markup: '<div class="hmcts-button-group">
+  <button class="hmcts-button">Continue</button>
+  <a class="hmcts-link hmcts-button-group__secondary" href="#">Cancel</a>
+</div>',
+    guidance: {
+      whenToUse: [
+        "For the primary action on a page or form step.",
+        "When the user needs to submit or continue a task."
+      ],
+      whenNotToUse: [
+        "For navigation between pages (use links instead).",
+        "When there are many actions competing for attention."
+      ]
+    }
+  }) }}
+{% endblock %}

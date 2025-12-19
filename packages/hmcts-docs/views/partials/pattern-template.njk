@@ -1,0 +1,35 @@
+{% macro patternPage(data) %}
+
+<header class="hmcts-page-header">
+  <span class="hmcts-page-header__caption">Pattern</span>
+  <h1 class="hmcts-page-header__title">{{ data.title }}</h1>
+  <p class="hmcts-page-header__intro">{{ data.intro }}</p>
+</header>
+<div class="hmcts-stack">
+  <section class="hmcts-panel hmcts-panel--tinted">
+    <h2 class="hmcts-u-section-title">Example</h2>
+    {{ data.example | safe }}
+  </section>
+  <section class="hmcts-panel">
+    <h2 class="hmcts-u-section-title">When to use</h2>
+    <ul>
+      {% for item in data.whenToUse %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% if data.buildingBlocks %}
+    <section class="hmcts-panel">
+      <h2 class="hmcts-u-section-title">Building blocks used</h2>
+      <ul>
+        {% for block in data.buildingBlocks %}
+          <li>
+            <a class="hmcts-link" href="{{ block.href }}">{{ block.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</div>
+
+{% endmacro %}

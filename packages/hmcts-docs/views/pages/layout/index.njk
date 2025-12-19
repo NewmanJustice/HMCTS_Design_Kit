@@ -1,0 +1,30 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <header class="hmcts-page-header">
+    <span class="hmcts-page-header__caption">Section</span>
+    <h1 class="hmcts-page-header__title">Layout</h1>
+    <p class="hmcts-page-header__intro">
+      Page structure and navigation patterns used across this documentation site.
+    </p>
+  </header>
+
+  <div class="hmcts-stack">
+    <section class="hmcts-panel">
+      <h2 class="hmcts-u-section-title">Available layout components</h2>
+      <ul>
+        {% for group in nav.groupedComponents %}
+          {% if group.title == "Layout" %}
+            {% for c in group.items %}
+              <li><a class="hmcts-link" href="{{ c.href }}">{{ c.title }}</a></li>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+
+    <div class="hmcts-inset-text">
+      Layout items are used to provide consistent navigation and page structure.
+    </div>
+  </div>
+{% endblock %}
