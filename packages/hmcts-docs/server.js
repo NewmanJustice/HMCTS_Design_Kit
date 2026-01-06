@@ -61,9 +61,9 @@ app.use((req, res, next) => {
 
 
 // ---- Static assets ----
-app.use(
+pp.use(
   "/assets",
-  express.static(path.join(__dirname, "..", "hmcts-frontend", "dist"))
+  express.static(path.join(__dirname, "packages", "hmcts-frontend", "dist"))
 );
 
 // ---- Views (Nunjucks) ----
