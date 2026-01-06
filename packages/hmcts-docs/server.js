@@ -39,6 +39,9 @@ if (!USER || !PASS) {
 }
 
 app.use((req, res, next) => {
+  // allow health checks through unauthenticated
+  if (req.path === "/health") return next();
+
   const header = req.headers.authorization || "";
   const [scheme, encoded] = header.split(" ");
 
@@ -55,6 +58,7 @@ app.use((req, res, next) => {
   res.set("WWW-Authenticate", 'Basic realm="HMCTS Docs"');
   return res.status(401).send("Invalid credentials.");
 });
+
 
 // ---- Static assets ----
 app.use(
@@ -97,11 +101,6 @@ app.use((req, res, next) => {
     }))
   };
 
-  res.locals.nav.patterns = patterns.map(p => ({
-    ...p,
-    href: `/patterns/${p.slug}`
-  }));
-
   res.locals.activeTopNav =
   req.path === "/" ? "overview" :
   req.path.startsWith("/layout") ? "layout" :
@@ -123,11 +122,7 @@ app.use((req, res, next) => {
 
 // ---- routes ----
 app.get("/", (req, res) => {
-  res.render("pages/index.njk", {
-    pageTitle: "Overview",
-    activeTopNav: "overview",
-    activeSideNav: "overview"
-  });
+  res.render("pages/index.njk", { pageTitle: "Overview" });
 });
 
 app.get("/patterns", (req, res) => {
@@ -158,7 +153,6 @@ app.get("/components", (req, res) => {
   });
 });
 
-
 app.get("/components/:slug", (req, res) => {
   const { slug } = req.params;
 
@@ -169,6 +163,8 @@ app.get("/components/:slug", (req, res) => {
     pageTitle: component.title
   });
 });
+
+app.get("/health", (req, res) => res.status(200).send("ok"));
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`HMCTS docs running on http://localhost:${port}`));
