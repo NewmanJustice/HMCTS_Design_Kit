@@ -61,7 +61,7 @@ app.use((req, res, next) => {
 
 
 // ---- Static assets ----
-pp.use(
+app.use(
   "/assets",
   express.static(path.join(__dirname, "packages", "hmcts-frontend", "dist"))
 );
